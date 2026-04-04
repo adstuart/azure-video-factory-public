@@ -1,0 +1,114 @@
+<mxfile>
+  <diagram name="Azure Video Factory" id="pipeline">
+    <mxGraphModel dx="1950" dy="1150" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1950" pageHeight="1150" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="title" value="Azure Video Factory" style="text;fontSize=30;fontStyle=1;fontColor=#1a1a2e;fontFamily=Segoe UI;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="530" y="30" width="400" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="AI-Powered Video Production Pipeline" style="text;fontSize=15;fontColor=#888888;fontFamily=Segoe UI;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="530" y="68" width="400" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="yt_channel" value="Your YouTube Channel&#xa;~50 existing videos" style="rounded=1;whiteSpace=wrap;fillColor=#fff3e0;strokeColor=#f5a623;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#1a1a2e;fontFamily=Segoe UI;arcSize=16;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="200" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="you" value="You" style="ellipse;whiteSpace=wrap;fillColor=#e8f4fd;strokeColor=#4a90d9;strokeWidth=2;fontSize=18;fontStyle=1;fontColor=#1a1a2e;fontFamily=Segoe UI;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="115" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_you_copilot" value="describe video idea" style="strokeColor=#4a90d9;strokeWidth=2;fontSize=11;fontColor=#4a90d9;fontFamily=Segoe UI;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="you" target="copilot">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_yt_copilot" value="learns style &amp; tone" style="dashed=1;strokeColor=#f5a623;strokeWidth=1.5;fontSize=12;fontColor=#f5a623;fontFamily=Segoe UI;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.4;" edge="1" parent="1" source="yt_channel" target="copilot">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="copilot" value="GitHub Copilot CLI&#xa;&lt;font style=&quot;font-size:12px;font-weight:normal;&quot; color=&quot;#aaaaaa&quot;&gt;Agent Orchestrator&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#1a1a2e;strokeWidth=0;fontSize=18;fontStyle=1;fontColor=#FFFFFF;fontFamily=Segoe UI;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="220" width="340" height="60" as="geometry"/>
+        </mxCell>
+
+
+        <mxCell id="e_copilot_a1" value="" style="strokeColor=#1a1a2e;strokeWidth=2;exitX=0.15;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="copilot" target="agent_script">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_copilot_a2" value="" style="strokeColor=#1a1a2e;strokeWidth=2;exitX=0.38;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="copilot" target="agent_diagram">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_copilot_a3" value="" style="strokeColor=#1a1a2e;strokeWidth=2;exitX=0.62;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="copilot" target="agent_portal">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_copilot_a4" value="" style="strokeColor=#1a1a2e;strokeWidth=2;exitX=0.85;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="copilot" target="agent_research">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agent_script" value="Script &amp; Voice&#xa;&lt;font style=&quot;font-size:11px;font-weight:normal;&quot; color=&quot;#64b5f6&quot;&gt;Azure Speech (CNV)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#64b5f6;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#1a1a2e;fontFamily=Segoe UI;arcSize=12;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="350" width="180" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agent_diagram" value="Diagrams &amp; Slides&#xa;&lt;font style=&quot;font-size:11px;font-weight:normal;&quot; color=&quot;#81c784&quot;&gt;draw.io MCP Server&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#81c784;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#1a1a2e;fontFamily=Segoe UI;arcSize=12;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="350" width="180" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agent_portal" value="Azure Portal Lab&#xa;&lt;font style=&quot;font-size:11px;font-weight:normal;&quot; color=&quot;#ffb74d&quot;&gt;Azure MCP + Playwright&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ffb74d;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#1a1a2e;fontFamily=Segoe UI;arcSize=12;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="350" width="190" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agent_research" value="Research &amp; Validation&#xa;&lt;font style=&quot;font-size:11px;font-weight:normal;&quot; color=&quot;#e57373&quot;&gt;MS Learn + Web Search&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#e57373;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#1a1a2e;fontFamily=Segoe UI;arcSize=12;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="350" width="195" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_yt_voice" value="trains voice clone" style="dashed=1;strokeColor=#f5a623;strokeWidth=1.5;fontSize=11;fontColor=#f5a623;fontFamily=Segoe UI;labelBackgroundColor=#FFFFFF;exitX=0.3;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="yt_channel" target="agent_script">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_a1_remotion" value="" style="strokeColor=#1a1a2e;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.15;entryY=0;" edge="1" parent="1" source="agent_script" target="remotion">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_a2_remotion" value="" style="strokeColor=#1a1a2e;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.38;entryY=0;" edge="1" parent="1" source="agent_diagram" target="remotion">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_a3_remotion" value="" style="strokeColor=#1a1a2e;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.62;entryY=0;" edge="1" parent="1" source="agent_portal" target="remotion">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_a4_remotion" value="" style="strokeColor=#1a1a2e;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.85;entryY=0;" edge="1" parent="1" source="agent_research" target="remotion">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="remotion" value="Remotion — Video Assembly&#xa;&lt;font style=&quot;font-size:12px;font-weight:normal;&quot; color=&quot;#7b1fa2&quot;&gt;Stitches voice + slides + diagrams + portal recordings → MP4&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#ba68c8;strokeWidth=2;fontSize=15;fontStyle=1;fontColor=#1a1a2e;fontFamily=Segoe UI;arcSize=8;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="490" width="960" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_remotion_qa" value="" style="strokeColor=#1a1a2e;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="remotion" target="qa">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="qa" value="Automated QA Loop&#xa;&lt;font style=&quot;font-size:12px;font-weight:normal;&quot; color=&quot;#9e6d00&quot;&gt;Frame extraction  •  Whisper STT  •  Visual review  •  PII redaction&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#fdd835;strokeWidth=2;fontSize=15;fontStyle=1;fontColor=#1a1a2e;fontFamily=Segoe UI;arcSize=8;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="610" width="760" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_qa_you" value="you review each cut" style="dashed=1;strokeColor=#4a90d9;strokeWidth=2;fontSize=12;fontColor=#4a90d9;fontFamily=Segoe UI;labelBackgroundColor=#FFFFFF;rounded=1;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="qa" target="you">
+          <mxGeometry x="0.4" y="20" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1300" y="640"/>
+              <mxPoint x="1300" y="145"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="0"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e_qa_output" value="approved" style="strokeColor=#1a1a2e;strokeWidth=2;fontSize=13;fontColor=#666666;fontFamily=Segoe UI;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="qa" target="output">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="output" value="Upload to YouTube" style="rounded=1;whiteSpace=wrap;fillColor=#ffcdd2;strokeColor=#ef5350;strokeWidth=2;fontSize=16;fontStyle=1;fontColor=#1a1a2e;fontFamily=Segoe UI;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="740" width="400" height="55" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
