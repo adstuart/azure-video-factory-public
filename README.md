@@ -43,7 +43,7 @@ This started as an experiment alongside an existing [Azure networking YouTube ch
 **What's not there yet:**
 - Portal captures are fragile — headless browser auth + PII redaction needs pixel-level post-processing
 - Diagrams need human review — text overlaps and box collisions are a recurring issue
-- Voice is impressive but not indistinguishable from a real recording
+- Voice is impressive but not indistinguishable from a real recording — and technical pronunciations need manual SSML corrections (e.g. "Azure", "CNAME")
 - **The AI can't generate the insights** — it doesn't know which features customers are missing, or why a particular architecture pattern matters. Domain expertise is the human contribution
 
 ---
